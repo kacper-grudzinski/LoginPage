@@ -82,6 +82,30 @@ header {
   color: rgba(43, 46, 247, 1);
 }
 
+.container{
+  padding: 16px;
+  position: absolute;
+  background: white;
+  height: 6em;
+  width: 60%;
+  border: black solid 3px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  align-content: center;
+  transform: scale(1);
+  transition: transform none;
+}
+
+.container.closed{
+  transform: scale(0);
+}
+
+.container p{
+  font-size: 2.2em;
+  font-weight: 600;
+  text-align: center;
+}
+
 .wrapper {
   position: relative;
   width: 400px;
@@ -94,7 +118,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*overflow: hidden;*/
+  overflow: hidden;
+  transform: scale(0);
+  transition: height 0.2s ease;
+}
+
+.wrapper.active-popup{
+  transform: scale(1);
+}
+
+.wrapper.active{
+height: 520px;
 }
 
 .wrapper .iconClose{
@@ -120,12 +154,24 @@ header {
 }
 
 .wrapper .formBox.login{
-  /*display: none;*/
+  transition: transform 0.2s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .formBox.login{
+  transition: none;
+  transform: translateX(-400px);
 }
 
 .wrapper .formBox.register{
   position: absolute;
+  transition: none;
   transform: translateX(400px);
+}
+
+.wrapper.active .formBox.register{
+  transition: transform 0.2s ease;
+  transform: translateX(0);
 }
 
 .formBox h2 {
