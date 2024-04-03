@@ -32,7 +32,7 @@ header {
   z-index: 99;
 }
 
-.company_name {
+.companyName {
   font-size: 2em;
   color: white;
   user-select: none;
@@ -94,6 +94,24 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.wrapper .iconClose{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: white;
+  color: black;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  border-bottom-left-radius: 20px;
 }
 
 .wrapper .formBox {
@@ -184,5 +202,23 @@ header {
     margin-top: 10px;
     font-size: 1.2em;
     font-weight: 500;
-    color: rgb(0, 3, 158);
+    color: black;
+}
+
+.login-register{
+  font-size: 0.9em;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  margin: 25px 0 10px;
+}
+
+.login-register p a{
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-register p a:hover{
+  text-decoration: underline;
 }
