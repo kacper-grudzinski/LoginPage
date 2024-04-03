@@ -1,3 +1,3 @@
 # Website with Login window
-Simple template of website with worknig **Login** button.
+Simple template of website with working **Login** button.  
 Check out!!
