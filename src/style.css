@@ -124,6 +124,12 @@ header {
   transform: translateY(-50%);
   font-size: 1em;
   color: white;
+  transition: 0.3s;
+}
+
+.inputBox input:focus~label,
+.inputBox input:valid~label {
+    top: -5px;
 }
 
 .inputBox input{
@@ -132,4 +138,17 @@ header {
     background: transparent;
     border: none;
     outline: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 400;
+    padding-left: 6px;
+    padding-right: 40px;
+}
+
+.inputBox .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 57px;
 }
