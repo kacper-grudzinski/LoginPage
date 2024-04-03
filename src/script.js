@@ -4,6 +4,8 @@ const loginLink = document.querySelector('.loginLink');
 const registerLink = document.querySelector('.registerLink');
 const popup = document.querySelector('.btnLogin-popup');
 const closeIcon = document.querySelector('.iconClose');
+const hamburger = document.querySelector('.hamburger');
+const navigation = document.querySelector('.navigation');
 
 registerLink.addEventListener('click', ()=>{
     wrapper.classList.add('active');
@@ -21,3 +23,7 @@ closeIcon.addEventListener('click', ()=>{
     wrapper.classList.remove('active-popup');
     container.classList.remove('closed');
 });
+
+hamburger.addEventListener('click', ()=>{
+    navigation.classList.toggle('open');
+})

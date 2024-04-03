@@ -36,6 +36,8 @@ header {
   font-size: 2em;
   color: white;
   user-select: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation a {
@@ -44,6 +46,14 @@ header {
   text-decoration: none;
   margin-left: 40px;
   color: white;
+}
+
+.hamburger {
+  padding: 4px;
+  background: none;
+  border: 0;
+  font-size: 2rem;
+  display: none;
 }
 
 .navigation a::after {
@@ -82,7 +92,7 @@ header {
   color: rgba(43, 46, 247, 1);
 }
 
-.container{
+.container {
   padding: 16px;
   position: absolute;
   background: white;
@@ -96,11 +106,11 @@ header {
   transition: transform none;
 }
 
-.container.closed{
+.container.closed {
   transform: scale(0);
 }
 
-.container p{
+.container p {
   font-size: 2.2em;
   font-weight: 600;
   text-align: center;
@@ -123,15 +133,15 @@ header {
   transition: height 0.2s ease;
 }
 
-.wrapper.active-popup{
+.wrapper.active-popup {
   transform: scale(1);
 }
 
-.wrapper.active{
-height: 520px;
+.wrapper.active {
+  height: 520px;
 }
 
-.wrapper .iconClose{
+.wrapper .iconClose {
   position: absolute;
   top: 0;
   right: 0;
@@ -153,23 +163,23 @@ height: 520px;
   padding: 40px;
 }
 
-.wrapper .formBox.login{
+.wrapper .formBox.login {
   transition: transform 0.2s ease;
   transform: translateX(0);
 }
 
-.wrapper.active .formBox.login{
+.wrapper.active .formBox.login {
   transition: none;
   transform: translateX(-400px);
 }
 
-.wrapper .formBox.register{
+.wrapper .formBox.register {
   position: absolute;
   transition: none;
   transform: translateX(400px);
 }
 
-.wrapper.active .formBox.register{
+.wrapper.active .formBox.register {
   transition: transform 0.2s ease;
   transform: translateX(0);
 }
@@ -200,67 +210,67 @@ height: 520px;
   transition: 0.3s;
 }
 
-.inputBox input:focus~label,
-.inputBox input:valid~label {
-    top: -5px;
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label {
+  top: -5px;
 }
 
-.inputBox input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: white;
-    font-weight: 400;
-    padding-left: 6px;
-    padding-right: 40px;
+.inputBox input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: white;
+  font-weight: 400;
+  padding-left: 6px;
+  padding-right: 40px;
 }
 
-.inputBox .icon{
-    position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    color: white;
-    line-height: 57px;
+.inputBox .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: white;
+  line-height: 57px;
 }
 
-.remember-forgot{
-    font-size: 0.9em;
-    color: white;
-    margin: -15px 0 15px 0;
-    display: flex;
-    justify-content: space-between;
+.remember-forgot {
+  font-size: 0.9em;
+  color: white;
+  margin: -15px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-.remember-forgot label input{
-    margin-right: 3px;
+.remember-forgot label input {
+  margin-right: 3px;
 }
 
-.remember-forgot a{
-    color: white;
-    text-decoration: none;
+.remember-forgot a {
+  color: white;
+  text-decoration: none;
 }
 
-.remember-forgot a:hover{
-    text-decoration: underline;
+.remember-forgot a:hover {
+  text-decoration: underline;
 }
 
-.btn{
-    width: 100%;
-    height: 45px;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 1.2em;
-    font-weight: 500;
-    color: black;
+.btn {
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: black;
 }
 
-.login-register{
+.login-register {
   font-size: 0.9em;
   color: white;
   text-align: center;
@@ -268,12 +278,34 @@ height: 520px;
   margin: 25px 0 10px;
 }
 
-.login-register p a{
+.login-register p a {
   color: whitesmoke;
   text-decoration: none;
   font-weight: 600;
 }
 
-.login-register p a:hover{
+.login-register p a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 844px) {
+  .container p {
+    font-size: 1.3em;
+  }
+
+  .wrapper {
+    margin: 10px;
+  }
+
+  .navigation a{
+    display: none;
+  }
+
+  header{
+    padding: 20px 50px;
+  }
+
+  .wrapper.active{
+    height: 480px;
+  }
 }
