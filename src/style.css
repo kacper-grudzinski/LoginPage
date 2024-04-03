@@ -94,7 +94,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .wrapper .iconClose{
@@ -117,6 +117,15 @@ header {
 .wrapper .formBox {
   width: 100%;
   padding: 40px;
+}
+
+.wrapper .formBox.login{
+  /*display: none;*/
+}
+
+.wrapper .formBox.register{
+  position: absolute;
+  transform: translateX(400px);
 }
 
 .formBox h2 {
